@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bailian.capture.CameraView
+            android:id="@+id/area_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lly_back"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="23dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:onClick="btnBackClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="21dp"
+                    android:background="@mipmap/common_back" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="拍照"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_333333">
+
+            <ImageButton
+                android:id="@+id/change_camera_ib"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/transparent"
+                android:src="@mipmap/icon_camera_common" />
+
+
+            <ImageButton
+                android:id="@+id/flicker_ib"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/icon_no_flicker" />
+
+
+            <ImageButton
+                android:id="@+id/camera"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:src="@mipmap/icon_camera_do_common" />
+
+
+            <com.facebook.drawee.view.DraweeView
+                android:id="@+id/DraweeView"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="49dp"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>
