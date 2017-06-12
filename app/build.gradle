@@ -11,10 +11,31 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {//签名配置
+        release {//发布版签名配置
+            storeFile file("bailian.keystore")//密钥文件路径
+            storePassword "bailian"//密钥文件密码
+            keyAlias "bailian"//key别名
+            keyPassword "bailian"//key密码
+        }
+        debug {//debug版签名配置
+            storeFile file("debug.keystore")//密钥文件路径
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release//设置签名信息
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
         }
     }
 }
